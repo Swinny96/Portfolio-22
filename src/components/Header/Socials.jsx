@@ -1,21 +1,19 @@
 import React from 'react'
+import SocialData from './Social-items'
 import styled from 'styled-components'
-import {BsLinkedin} from 'react-icons/bs'
-import {FaGithub} from 'react-icons/fa'
-import {FiDribbble} from 'react-icons/fi'
 
 const Socials = () => {
   return (
     <HeaderSocials>
-        <a href='https://linkedin.com' target='_blank' rel="noreferrer">
-            <BsLinkedin/>
-        </a>
-        <a href='https://github.com' target='_blank' rel="noreferrer">
-            <FaGithub/>
-        </a>
-        <a href='https://dribble.com' target='_blank' rel="noreferrer">
-            <FiDribbble/>
-        </a>
+        {
+          SocialData.map(({icon, link, title}) => {
+            return (
+                <SocialLink href={link} aria-label={'View' + title} target='_blank' rel="noreferrer">
+                    {icon}
+                </SocialLink>
+            )
+          })
+        }
     </HeaderSocials>
   )
 }
@@ -41,3 +39,4 @@ const HeaderSocials = styled.div`
         display: none;
     }
 `
+const SocialLink = styled.a``

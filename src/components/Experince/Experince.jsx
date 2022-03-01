@@ -1,6 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 import { BsPatchCheckFill } from 'react-icons/bs'
+import FrontendSkills from './FontendSkills'
+import BackendSkills from './BackendSkills'
 
 const Experince = () => {
   return (
@@ -11,88 +13,37 @@ const Experince = () => {
         <ExperinceFrontend>
           <Heading>Frontend Development</Heading>
           <ExperinceContent>
-            <ExperinceContents>
-              <BsPatchCheckFill className='experince__details-icon'/>
-              <Attributes>
-                <Skill>HTML</Skill>
-                <Level className='text_light'>Experinced</Level>
-              </Attributes>
-            </ExperinceContents>
-            <ExperinceContents>
-              <BsPatchCheckFill className='experince__details-icon'/>
-              <Attributes>
-                <Skill>CSS</Skill>
-                <Level className='text_light'>Intermediate</Level>
-              </Attributes>
-            </ExperinceContents>
-            <ExperinceContents>
-              <BsPatchCheckFill className='experince__details-icon'/>
-              <Attributes>
-                <Skill>Javascript</Skill>
-                <Level className='text_light'>Experinced</Level>
-              </Attributes>
-            </ExperinceContents>
-            <ExperinceContents>
-              <BsPatchCheckFill className='experince__details-icon'/>
-              <Attributes>
-                <Skill>Bootstrap</Skill>
-                <Level className='text_light'>Experinced</Level>
-              </Attributes>
-            </ExperinceContents>
-            <ExperinceContents>
-              <BsPatchCheckFill className='experince__details-icon'/>
-              <Attributes>
-                <Skill>Tailwind</Skill>
-                <Level className='text_light'>Experinced</Level>
-              </Attributes>
-            </ExperinceContents>
-            <ExperinceContents>
-              <BsPatchCheckFill className='experince__details-icon'/>
-              <Attributes>
-                <Skill>React</Skill>
-                <Level className='text_light'>Experinced</Level>
-              </Attributes>
-            </ExperinceContents>
+              {
+              FrontendSkills.map(({skill, level}) => {
+                return (
+                  <ExperinceContents>
+                  <BsPatchCheckFill className='experince__details-icon'/>
+                  <Attributes>
+                    <Skill>{skill}</Skill>
+                    <Level className='text_light'>{level}</Level>
+                  </Attributes>
+                </ExperinceContents>
+                )
+              })
+            }
           </ExperinceContent>
         </ExperinceFrontend>
         <ExperinceBackend>
           <Heading>Backend Development</Heading>
             <ExperinceContent>
-              <ExperinceContents>
-                <BsPatchCheckFill className='experince__details-icon'/>
-                <Attributes>
-                  <Skill>Node JS</Skill>
-                  <Level className='text_light'>Experinced</Level>
-                </Attributes>
-              </ExperinceContents>
-              <ExperinceContents>
-                <BsPatchCheckFill className='experince__details-icon'/>
-                <Attributes>
-                  <Skill>MongoDB</Skill>
-                  <Level className='text_light'>Intermediate</Level>
-                </Attributes>
-              </ExperinceContents>
-              <ExperinceContents>
-                <BsPatchCheckFill className='experince__details-icon'/>
-                <Attributes>
-                  <Skill>PHP</Skill>
-                  <Level className='text_light'>Intermediate</Level>
-                </Attributes>
-              </ExperinceContents>
-              <ExperinceContents>
-                <BsPatchCheckFill className='experince__details-icon'/>
-                <Attributes>
-                  <Skill>MySql</Skill>
-                  <Level className='text_light'>Basic</Level>
-                </Attributes>
-              </ExperinceContents>
-              <ExperinceContents>
-                <BsPatchCheckFill className='experince__details-icon'/>
-                <Attributes>
-                  <Skill>Python</Skill>
-                  <Level className='text_light'>Experinced</Level>
-                </Attributes>
-              </ExperinceContents>
+            {
+              BackendSkills.map(({skill, level}) => {
+                return (
+                  <ExperinceContents>
+                  <BsPatchCheckFill className='experince__details-icon'/>
+                  <Attributes>
+                    <Skill>{skill}</Skill>
+                    <Level className='text_light'>{level}</Level>
+                  </Attributes>
+                </ExperinceContents>
+                )
+              })
+            }
             </ExperinceContent>
         </ExperinceBackend>
       </ExperinceContainer>

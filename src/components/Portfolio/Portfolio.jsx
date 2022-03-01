@@ -63,7 +63,10 @@ const PortfolioImageConatiner = styled.div`
   border-radius: 1.5rem;
   overflow: hidden;
 `
-const PortfolioImage = styled.img``
+const PortfolioImage = styled.img`
+  aspect-ratio: 4/3;
+  object-fit: scale-down;
+`
 const PortfolioHeading = styled.h3`
   margin: 1.2rem 0 2rem;
 `

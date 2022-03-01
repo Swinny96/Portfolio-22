@@ -1,3 +1,5 @@
+import EyeSight from '../../images/projects/eyesight.png';
+
 const Data = [
     {
         id: 1,

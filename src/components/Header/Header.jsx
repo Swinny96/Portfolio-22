@@ -37,12 +37,6 @@ const MyHeader = styled.header`
   height: 100vh;
   padding-top: 7rem;
   overflow: hidden;
-  @media screen and (max-width: 1024px) {
-    height: 68vh;
-  }
-  @media screen and (max-width: 600px) {
-    height: 100vh;
-  }
 `
 const HeaderContainer = styled.div`
   text-align: center;
@@ -53,10 +47,12 @@ const Welcome = styled.h5``
 const Name = styled.h1``
 const MySelf = styled.div`
   background: linear-gradient(var(--color-primary), transparent);
-  width: 20rem;
+  width: 22rem;
   height: 30rem;
+  min-height: 400px;
   position: absolute;
-  left: calc(50% - 11rem);
+  left: 50%;
+  transform: translate(-50%);
   margin-top: 4rem;
   border-radius: 12rem 12rem 0 0;
   overflow: hidden;
@@ -64,6 +60,7 @@ const MySelf = styled.div`
 `
 const MyImgage = styled.img`
   height: 25rem;
+  
 `
 const Role = styled.h5``
 const ScrollDown = styled.a`
