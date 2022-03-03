@@ -9,7 +9,7 @@ const Portfolio = () => {
       <h2>Portfolio</h2>
       <PortfolioContainer className='container'>
         {
-          Data.map(({id, image, title, text, github, demo }) => {
+          Data.map(({id, image, title, text, github, demo , linktype}) => {
             return (
               <PortfolioItem key={id}>
               <PortfolioImageConatiner>
@@ -18,8 +18,8 @@ const Portfolio = () => {
               <PortfolioHeading>{title}</PortfolioHeading>
               <PortfolioText>{text}</PortfolioText>
               <PortfolioCTA>
-                <PortfolioLink href={github} className='btn'>GitHub</PortfolioLink>
-                <PortfolioLink href={demo} className='btn btn-primary' target='_blank'>Live Demo</PortfolioLink>
+                <PortfolioLink href={github} className='btn' target='_blank' aria-label={'View' + ' ' + 'GitHub' +  ' ' + 'for' + ' ' + [title]}>GitHub</PortfolioLink>
+                <PortfolioLink href={demo} className='btn btn-primary' target='_blank' aria-label={'View' + ' ' + [linktype] +  ' ' + 'for' + ' ' + [title]}>{linktype}</PortfolioLink>
               </PortfolioCTA>
             </PortfolioItem>
             )
@@ -73,6 +73,7 @@ const PortfolioHeading = styled.h3`
 `
 const PortfolioText = styled.p`
   margin: 1rem 0 2rem;
+  color: var(--color-light);
 `
 const PortfolioCTA = styled.div`
   display: flex;

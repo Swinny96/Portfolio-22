@@ -18,17 +18,6 @@ const Footer = () => {
           })
         }
       </Permalinks>
-      <Socials>
-      {
-          SocialLinks.map(({name, icon, link}) => {
-            return (
-              <SocialLink href={link} aria-label={'View'  + ' ' + [name]}>
-                {icon}
-              </SocialLink>
-            )
-          })
-        }
-      </Socials>
       <Copyright>
         <Copyprint>&copy; CSwinton, All right reserved</Copyprint>
       </Copyright>

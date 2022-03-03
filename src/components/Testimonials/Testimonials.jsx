@@ -14,7 +14,7 @@ import 'swiper/css/pagination';
 const Testimonials = () => {
   return (
     <TestimonialsSection id='testimonials'>
-      <h5>Reviews from Colleges</h5>
+      <h5>Reviews from people I've worked with</h5>
       <h2>Testimonials</h2>
       <Swiper className='container TestimonialContainer'
         // install Swiper modules
@@ -24,13 +24,16 @@ const Testimonials = () => {
         pagination={{ clickable: true }}
         >
         {
-          TesimonialList.map(({avatar, name, review}, index) => {
+          TesimonialList.map(({avatar, name, linkedin, role, review}, index) => {
             return (
             <SwiperSlide className="Testimonial" key={index}>
               <ClientAvatar>
-                <ClientImage src={avatar} alt={name} />
+                <ClientLink href={linkedin} aria-label={'View' + ' ' + [name] + 's' + ' ' + 'LinkedIn Profile'} target="_blank">
+                  <ClientImage src={avatar} alt={name} />
+                </ClientLink>
               </ClientAvatar>
-              <ClientName>{name}</ClientName>
+              <ClientName href={linkedin} aria-label={'View' + ' ' + [name] + 's' + ' ' + 'LinkedIn Profile'} target="_blank">{name}</ClientName>
+              <ClientRole>{role}</ClientRole>
               <ClientReview>{review}</ClientReview>
             </SwiperSlide>
             )
@@ -44,6 +47,9 @@ const Testimonials = () => {
 export default Testimonials
 
 const TestimonialsSection = styled.section``
+const ClientLink = styled.a`
+  display: block;
+`
 const ClientAvatar = styled.div`
   width: 4rem;
   aspect-ratio: 1/1;
@@ -53,7 +59,15 @@ const ClientAvatar = styled.div`
   border: 0.4rem solid var(--color-primary-variant);
 `
 const ClientImage = styled.img``
-const ClientName = styled.h5``
+const ClientName = styled.a`
+  display: block;
+  font-size: 0.83em;
+  font-weight: 500;
+  color: var(--color-primary);
+`
+const ClientRole = styled.h5`
+  color: var(--color-white);
+`
 const ClientReview = styled.small`
   color: var(--color-light);
   font-weight: 300;
