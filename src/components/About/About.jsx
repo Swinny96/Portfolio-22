@@ -1,9 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import Me from '../../images/me.webp'
-import { FaAward } from 'react-icons/fa'
-import { FiUsers } from 'react-icons/fi'
-import { VscFolderLibrary } from 'react-icons/vsc'
+import AboutList from './AboutList'
 
 const About = () => {
   return (
@@ -16,26 +14,20 @@ const About = () => {
         </AboutMe>
         <AboutContent>
           <AboutCards>
-            <AboutCard>
-              <FaAward className='about_icon'/>
-              <Title>Experince</Title>
-              <Line>5+ Years Working</Line>
-            </AboutCard>
-            <AboutCard>
-              <FiUsers className='about_icon'/>
-              <Title>Clients</Title>
-              <Line>300+ Clients Wordwide</Line>
-            </AboutCard>
-            <AboutCard>
-              <VscFolderLibrary className='about_icon'/>
-              <Title>Projects</Title>
-              <Line>80+ Complete</Line>
-            </AboutCard>
+          {
+            AboutList.map(({icon, title, statement}) => {
+              return (
+                <AboutCard>
+                  {icon}
+                  <Title>{title}</Title>
+                  <Line>{statement}</Line>
+                </AboutCard>
+              )
+            })
+          }
           </AboutCards>
-          <Text>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo earum, veritatis voluptas possimus voluptatum ducimus modi praesentium sed fugiat distinctio maxime blanditiis, aperiam doloremque numquam ullam. Ad voluptate nobis adipisci.
-          </Text>
-          <a href="#contact" className='btn btn-primary'>Let's Talk</a>
+          <Text>Am a Front-End Developer for Enghouse Networks with an 1st Degree in Web Design & Development and a former Student of the Year. Highley Skilled, knowledgeable and experienced with Industry-standard UX tech tooling associated with designer & developer competencies and proficiencies.</Text>
+          <LetsTalk href="#contact" className='btn btn-primary'>Let's Talk</LetsTalk>
         </AboutContent>
       </AboutConatiner>
     </AboutSection>
@@ -106,6 +98,10 @@ const AboutCards = styled.div`
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
   }
+  @media screen and (max-width: 400px) {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
 `
 const AboutCard = styled.article`
   background: var(--color-bg-variant);
@@ -131,3 +127,5 @@ const Text = styled.p`
     margin: 1.5rem 0;
   }
 `
+
+const LetsTalk = styled.a``

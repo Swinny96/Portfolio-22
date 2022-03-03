@@ -5,23 +5,23 @@ const FrontendSkills = [
     },
     {
         skill: 'CSS',
-        level: 'Intermediate',
+        level: 'Experinced',
     },
     {
         skill: 'Javascript',
-        level: 'Experinced',
+        level: 'Intermediate',
     },
     {
         skill: 'Bootstrap',
-        level: 'Experinced',
-    },
-    {
-        skill: 'Tailwind',
-        level: 'Experinced',
+        level: 'Basic',
     },
     {
         skill: 'React',
         level: 'Experinced',
+    },
+    {
+        skill: 'jQuery',
+        level: 'Basic',
     },
 ]
 

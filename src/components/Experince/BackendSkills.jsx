@@ -1,11 +1,11 @@
 const BackendSkills = [
     {
         skill: 'Node JS',
-        level: 'Experinced',
+        level: 'Basic',
     },
     {
         skill: 'MongoDB',
-        level: 'Intermediate',
+        level: 'Basic',
     },
     {
         skill: 'PHP',
@@ -16,7 +16,7 @@ const BackendSkills = [
         level: 'Basic',
     },
     {
-        skill: 'Python',
+        skill: 'JSON API',
         level: 'Experinced',
     },
 ]

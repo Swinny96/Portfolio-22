@@ -1,10 +1,8 @@
 import React from 'react';
+import ContactList from './ContactList';
 import { useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import styled from 'styled-components';
-import {MdOutlineEmail} from 'react-icons/md';
-import {RiMessengerLine} from 'react-icons/ri';
-import {BsWhatsapp} from 'react-icons/bs';
 
 const Contact = () => {
 
@@ -29,24 +27,18 @@ const Contact = () => {
       <h2>Contact Me</h2>
       <ContactContainer className='container'>
         <ContactOptions>
-          <ContactOption>
-            <MdOutlineEmail className='contact__option-icon'/>
-            <ContactType>Email</ContactType>
-            <ContactName>dummyemail@gmail.com</ContactName>
-            <ContactLink href='mailto:dummyemail@gmail.com' target='_blank'>Send a message</ContactLink>
-          </ContactOption>
-          <ContactOption>
-            <RiMessengerLine className='contact__option-icon'/>
-            <ContactType>Messenger</ContactType>
-            <ContactName>Christopher Swinton</ContactName>
-            <ContactLink href='https://facebook.com' target='_blank'>Send a message</ContactLink>
-          </ContactOption>
-          <ContactOption>
-            <BsWhatsapp className='contact__option-icon'/>
-            <ContactType>WhatsApp</ContactType>
-            <ContactName>+447479537010</ContactName>
-            <ContactLink href='https://api.whatsapp.com/send?phone=+447479537010' target='_blank'>Send a message</ContactLink>
-          </ContactOption>
+          {
+            ContactList.map(({icon, service, name, link}) => {
+              return (
+                <ContactOption href={link} target='_blank'>
+                  {icon}
+                  <ContactType>{service}</ContactType>
+                  <ContactName>{name}</ContactName>
+                  <ContactLink href={link} target='_blank' aria-label={'Send a message via' + ' ' + [service]}>Send a message</ContactLink>
+                </ContactOption>
+              )
+            })
+          }
         </ContactOptions>
         <ContactForm ref={form} onSubmit={sendEmail}>
           <ContactInput type="text" name='name' placeholder='Your Full Name' required/>

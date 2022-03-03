@@ -127,6 +127,11 @@ const ExperinceContent = styled.div`
   @media screen and (max-width: 1024px) {
     padding: 1rem;
   }
+
+  @media screen and (max-width: 350px) {
+    grid-template-columns: 1fr;
+    row-gap: 1rem;
+  }
 `
 const ExperinceContents = styled.article`
   display: flex;

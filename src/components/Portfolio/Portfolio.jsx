@@ -9,13 +9,14 @@ const Portfolio = () => {
       <h2>Portfolio</h2>
       <PortfolioContainer className='container'>
         {
-          Data.map(({id, image, title, github, demo }) => {
+          Data.map(({id, image, title, text, github, demo }) => {
             return (
               <PortfolioItem key={id}>
               <PortfolioImageConatiner>
                 <PortfolioImage src={image} alt={title} />
               </PortfolioImageConatiner>
               <PortfolioHeading>{title}</PortfolioHeading>
+              <PortfolioText>{text}</PortfolioText>
               <PortfolioCTA>
                 <PortfolioLink href={github} className='btn'>GitHub</PortfolioLink>
                 <PortfolioLink href={demo} className='btn btn-primary' target='_blank'>Live Demo</PortfolioLink>
@@ -68,7 +69,10 @@ const PortfolioImage = styled.img`
   object-fit: scale-down;
 `
 const PortfolioHeading = styled.h3`
-  margin: 1.2rem 0 2rem;
+  margin: 1.2rem 0;
+`
+const PortfolioText = styled.p`
+  margin: 1rem 0 2rem;
 `
 const PortfolioCTA = styled.div`
   display: flex;

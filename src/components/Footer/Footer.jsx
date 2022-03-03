@@ -1,46 +1,33 @@
 import React from 'react'
 import styled from 'styled-components';
-import {FaFacebookF} from 'react-icons/fa'
-import {FiInstagram} from 'react-icons/fi'
-import {IoLogoTwitter} from 'react-icons/io'
+import PageList from './PageList';
+import SocialLinks from './SocialLinks';
 
 const Footer = () => {
   return (
     <FooterSection id="footer">
       <FooterLink href='#'>CSwinton</FooterLink>
       <Permalinks>
-        <Permalink>
-          <Link href="#">Home</Link>
-        </Permalink>
-        <Permalink>
-          <Link href="#about">About</Link>
-        </Permalink>
-        <Permalink>
-          <Link href="#experince">Experince</Link>
-        </Permalink>
-        <Permalink>
-          <Link href="#services">Services</Link>
-        </Permalink>
-        <Permalink>
-          <Link href="#portfolio">Portfolio</Link>
-        </Permalink>
-        <Permalink>
-          <Link href="#testimonials">Testimonials</Link>
-        </Permalink>
-        <Permalink>
-          <Link href="#contact">Contact</Link>
-        </Permalink>
+        {
+          PageList.map(({name, link}) => {
+            return (
+              <Permalink>
+                <Link href={link}>{name}</Link>
+              </Permalink>
+            )
+          })
+        }
       </Permalinks>
       <Socials>
-        <SocialLink href='https://facebook.com'>
-          <FaFacebookF className='footer__link'/>
-        </SocialLink>
-        <SocialLink href='https://instagram.com'>
-          <FiInstagram/>
-        </SocialLink>
-        <SocialLink href='https://twitter.com'>
-          <IoLogoTwitter/>
-        </SocialLink>
+      {
+          SocialLinks.map(({name, icon, link}) => {
+            return (
+              <SocialLink href={link} aria-label={'View'  + ' ' + [name]}>
+                {icon}
+              </SocialLink>
+            )
+          })
+        }
       </Socials>
       <Copyright>
         <Copyprint>&copy; CSwinton, All right reserved</Copyprint>
