@@ -12,10 +12,6 @@ const PageList = [
         link: '#experince',
     },
     {
-        name: 'Services',
-        link: '#services',
-    },
-    {
         name: 'Portfolio',
         link: '#portfolio',
     },
