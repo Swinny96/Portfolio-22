@@ -33,7 +33,7 @@ const Data = [
         text: 'Smart Home Help is a service that aims to help people with their technolgy at home',
         github: 'https://github.com',
         linktype: 'Live Site',
-        demo: '"https://www.smart-home-help.co.uk/'
+        demo: 'https://www.smart-home-help.co.uk/'
     },
     {
         id: 5,

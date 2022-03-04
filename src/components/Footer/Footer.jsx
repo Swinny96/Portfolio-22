@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from 'styled-components';
 import PageList from './PageList';
-import SocialLinks from './SocialLinks';
 
 const Footer = () => {
   return (
@@ -57,7 +56,7 @@ const Permalink = styled.li``
 const Link = styled.a`
   color: var(--color-bg);
 `
-const Socials = styled.div`
+/* const Socials = styled.div`
   display: flex;
   justify-content: center;
   gap: 1rem;
@@ -82,7 +81,7 @@ const SocialLink = styled.a`
     color: var(--color-bg);
     border-color: var(--color-bg);
   }
-`
+` */
 const Copyright = styled.div`
   margin-bottom: 4rem;
   color: var(--color-bg);
