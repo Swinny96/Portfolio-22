@@ -5,7 +5,8 @@ import Seo from "../components/seo"
 import About from "../components/About/About"
 import Experince from "../components/Experince/Experince"
 // import Services from "../components/Services/Services"
-import Portfolio from "../components/Portfolio/Portfolio"
+// import Portfolio from "../components/Portfolio/Portfolio"
+import ProjectSection from "../components/Portfolio/ProjectSection"
 import Testimonials from "../components/Testimonials/Testimonials"
 import Contact from "../components/Contact/Contact"
 
@@ -15,7 +16,8 @@ const IndexPage = () => (
     <About />
     <Experince />
     {/* <Services /> */}
-    <Portfolio />
+    {/* <Portfolio /> */}
+    <ProjectSection />
     <Testimonials />
     <Contact />
   </Layout>

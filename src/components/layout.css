@@ -134,6 +134,29 @@ img {
   object-fit: cover;
 }
 
+.tab-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding-bottom: 2rem;
+}
+
+li.tab-list-item {
+  display: inline-block;
+  transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.tab-list-item {
+  display: inline-block;
+  list-style: none;
+}
+
+.tab-list-item:hover {
+  background: var(--color-white);
+  color: var(--color-bg);
+  border-color: transparent;
+}
+
 /* ============== ABOUT STYLES ============ */
 
 .about_icon {
