@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { StaticImage } from "gatsby-plugin-image"
 import Me from '../../images/me.webp'
 import AboutList from './AboutList'
 
@@ -10,7 +11,7 @@ const About = () => {
       <h2>About Me</h2>
       <AboutConatiner className='container'>
         <AboutMe>
-          <Myself src={Me} loading="lazy" alt="Christopher Swinton" />
+          <StaticImage src='../../images/me.webp' className="myself" loading="lazy" alt="Christopher Swinton" />
         </AboutMe>
         <AboutContent>
           <AboutCards>
@@ -66,6 +67,17 @@ const AboutMe = styled.div`
   );
   display: grid;
   place-items: center;
+
+  .myself {
+    border-radius: 2rem;
+    overflow: hidden;
+    transform: rotate(10deg);
+    transition: var(--transition);
+    &:hover {
+      transform: rotate(0);
+    }
+  }
+
   @media screen and (max-width: 1024px) {
     width: 50%;
     margin: 2rem auto 4rem;
@@ -80,16 +92,7 @@ const AboutContent = styled.div`
     text-align: center;
   }
 `
-const Myself = styled.img`
-  border-radius: 2rem;
-  overflow: hidden;
-  transform: rotate(10deg);
-  transition: var(--transition);
-
-  &:hover {
-    transform: rotate(0);
-  }
-`
+const Myself = styled.img``
 const AboutCards = styled.div`
   display: grid;
   grid-template-columns: repeat(3 1fr);

@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from "prop-types"
 import styled from 'styled-components'
 import Cta from './Cta'
-import Me from '../../images/nobg-me.webp'
+import { StaticImage } from "gatsby-plugin-image"
 import Socials from './Socials'
 
 const Header = ({ siteTitle }) => (
@@ -14,7 +14,7 @@ const Header = ({ siteTitle }) => (
         <Cta />
         <Socials />
         <MySelf className="me">
-          <MyImage src={Me} loading="lazy" alt={siteTitle}/>
+          <StaticImage src="../../images/nobg-me.webp" loading="lazy" alt={siteTitle}/>
         </MySelf>
         <ScrollDown className='scroll_down' href='#contact'>
           Scroll Down
@@ -57,9 +57,10 @@ const MySelf = styled.div`
   border-radius: 12rem 12rem 0 0;
   overflow: hidden;
   padding: 5rem 1.5rem 1.5rem 1.5rem;
-`
-const MyImage = styled.img`
-  height: 25rem;
+
+  img {
+    height: 25rem;
+  }
 `
 const Role = styled.h5``
 const ScrollDown = styled.a`
