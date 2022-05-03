@@ -10,22 +10,22 @@ const Nav = () => {
   const [activeNav, setActiveNav] = useState('#home')
   return (
     <Navigation>
-      <Link href="#home" onClick={() => setActiveNav('#home')} className={activeNav === '#home' ? 'active' : ''}>
+      <Link href="#home" onClick={() => setActiveNav('#home')} className={activeNav === '#home' ? 'active' : ''} aria-label={'View'  + ' ' + 'home'}>
         <AiOutlineHome/>
       </Link>
-      <Link href="#about" onClick={() => setActiveNav('#about')} className={activeNav === '#about' ? 'active' : ''}>
+      <Link href="#about" onClick={() => setActiveNav('#about')} className={activeNav === '#about' ? 'active' : ''} aria-label={'View'  + ' ' + 'about'}>
         <AiOutlineUser/>
       </Link>
-      <Link href="#experince" onClick={() => setActiveNav('#experince')} className={activeNav === '#experince' ? 'active' : ''}>
+      <Link href="#experince" onClick={() => setActiveNav('#experince')} className={activeNav === '#experince' ? 'active' : ''} aria-label={'View'  + ' ' + 'experince'}>
         <BiBook/>
       </Link>
-      <Link href="#portfolio" onClick={() => setActiveNav('#portfolio')} className={activeNav === '#portfolio' ? 'active' : ''}>
+      <Link href="#portfolio" onClick={() => setActiveNav('#portfolio')} className={activeNav === '#portfolio' ? 'active' : ''} aria-label={'View'  + ' ' + 'portfolio'}>
         <IoBrushOutline/>
       </Link>
-      <Link href="#testimonials" onClick={() => setActiveNav('#testimonials')} className={activeNav === '#testimonials' ? 'active' : ''}>
+      {/* <Link href="#testimonials" onClick={() => setActiveNav('#testimonials')} className={activeNav === '#testimonials' ? 'active' : ''} aria-label={'View'  + ' ' + 'testimonials'}>
         <VscPreview/>
-      </Link>
-      <Link href="#contact" onClick={() => setActiveNav('#contact')} className={activeNav === '#contact' ? 'active' : ''}>
+      </Link> */}
+      <Link href="#contact" onClick={() => setActiveNav('#contact')} className={activeNav === '#contact' ? 'active' : ''} aria-label={'View'  + ' ' + 'contact'}>
         <BiMessageSquareDetail/>
       </Link>
 {/*       {

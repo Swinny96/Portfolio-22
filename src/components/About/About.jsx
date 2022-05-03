@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
 import { StaticImage } from "gatsby-plugin-image"
-import Me from '../../images/me.webp'
 import AboutList from './AboutList'
 
 const About = () => {
