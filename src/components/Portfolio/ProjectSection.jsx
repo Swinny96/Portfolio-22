@@ -20,7 +20,7 @@ function ProjectSection() {
                     return (
                     <PortfolioItem key={id}>
                         <PortfolioImageConatiner>
-                            <PortfolioImage src={image} alt={title} />
+                            <PortfolioImage src={image} loading="lazy" alt={title} />
                         </PortfolioImageConatiner>
                         <PortfolioHeading>{title}</PortfolioHeading>
                         <PortfolioText>{text}</PortfolioText>
@@ -39,7 +39,7 @@ function ProjectSection() {
                     return (
                     <PortfolioItem key={id}>
                         <PortfolioImageConatiner>
-                            <PortfolioImage src={image} alt={title} />
+                            <PortfolioImage src={image} loading="lazy" alt={title} />
                         </PortfolioImageConatiner>
                         <PortfolioHeading>{title}</PortfolioHeading>
                         <PortfolioText>{text}</PortfolioText>
@@ -58,7 +58,7 @@ function ProjectSection() {
                     return (
                     <PortfolioItem key={id}>
                         <PortfolioImageConatiner>
-                            <PortfolioImage src={image} alt={title} />
+                            <PortfolioImage src={image} loading="lazy" alt={title} />
                         </PortfolioImageConatiner>
                         <PortfolioHeading>{title}</PortfolioHeading>
                         <PortfolioText>{text}</PortfolioText>
@@ -77,7 +77,7 @@ function ProjectSection() {
                     return (
                     <PortfolioItem key={id}>
                         <PortfolioImageConatiner>
-                            <PortfolioImage src={image} alt={title} />
+                            <PortfolioImage src={image} loading="lazy" alt={title} />
                         </PortfolioImageConatiner>
                         <PortfolioHeading>{title}</PortfolioHeading>
                         <PortfolioText>{text}</PortfolioText>
@@ -96,7 +96,7 @@ function ProjectSection() {
                     return (
                     <PortfolioItem key={id}>
                         <PortfolioImageConatiner>
-                            <PortfolioImage src={image} alt={title} />
+                            <PortfolioImage src={image} loading="lazy" alt={title} />
                         </PortfolioImageConatiner>
                         <PortfolioHeading>{title}</PortfolioHeading>
                         <PortfolioText>{text}</PortfolioText>
@@ -115,7 +115,7 @@ function ProjectSection() {
                     return (
                     <PortfolioItem key={id}>
                         <PortfolioImageConatiner>
-                            <PortfolioImage src={image} alt={title} />
+                            <PortfolioImage src={image} loading="lazy" alt={title} />
                         </PortfolioImageConatiner>
                         <PortfolioHeading>{title}</PortfolioHeading>
                         <PortfolioText>{text}</PortfolioText>

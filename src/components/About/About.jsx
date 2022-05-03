@@ -10,7 +10,7 @@ const About = () => {
       <h2>About Me</h2>
       <AboutConatiner className='container'>
         <AboutMe>
-          <Myself src={Me} alt="Christopher Swinton" />
+          <Myself src={Me} loading="lazy" alt="Christopher Swinton" />
         </AboutMe>
         <AboutContent>
           <AboutCards>

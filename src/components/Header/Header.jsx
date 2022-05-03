@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from "prop-types"
 import styled from 'styled-components'
 import Cta from './Cta'
-import Me from '../../images/nobg-me.png'
+import Me from '../../images/nobg-me.webp'
 import Socials from './Socials'
 
 const Header = ({ siteTitle }) => (
@@ -14,7 +14,7 @@ const Header = ({ siteTitle }) => (
         <Cta />
         <Socials />
         <MySelf className="me">
-          <MyImgage src={Me} alt={siteTitle}/>
+          <MyImage src={Me} loading="lazy" alt={siteTitle}/>
         </MySelf>
         <ScrollDown className='scroll_down' href='#contact'>
           Scroll Down
@@ -58,9 +58,8 @@ const MySelf = styled.div`
   overflow: hidden;
   padding: 5rem 1.5rem 1.5rem 1.5rem;
 `
-const MyImgage = styled.img`
+const MyImage = styled.img`
   height: 25rem;
-  
 `
 const Role = styled.h5``
 const ScrollDown = styled.a`
