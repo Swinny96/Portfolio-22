@@ -29,7 +29,7 @@ const Testimonials = () => {
             <SwiperSlide className="Testimonial" key={index}>
               <ClientAvatar>
                 <ClientLink href={linkedin} aria-label={'View' + ' ' + [name] + 's' + ' ' + 'LinkedIn Profile'} target="_blank">
-                  <ClientImage src={avatar} alt={name} />
+                  <ClientImage src={avatar} loading="lazy" alt={name} />
                 </ClientLink>
               </ClientAvatar>
               <ClientName href={linkedin} aria-label={'View' + ' ' + [name] + 's' + ' ' + 'LinkedIn Profile'} target="_blank">{name}</ClientName>

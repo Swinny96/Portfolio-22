@@ -7,7 +7,7 @@ import Experince from "../components/Experince/Experince"
 // import Services from "../components/Services/Services"
 // import Portfolio from "../components/Portfolio/Portfolio"
 import ProjectSection from "../components/Portfolio/ProjectSection"
-import Testimonials from "../components/Testimonials/Testimonials"
+// import Testimonials from "../components/Testimonials/Testimonials"
 import Contact from "../components/Contact/Contact"
 
 const IndexPage = () => (
@@ -18,7 +18,7 @@ const IndexPage = () => (
     {/* <Services /> */}
     {/* <Portfolio /> */}
     <ProjectSection />
-    <Testimonials />
+    {/* <Testimonials /> */}
     <Contact />
   </Layout>
 )
