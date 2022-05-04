@@ -17,6 +17,15 @@ const TwentyTwentyOne = [
         linktype: 'Live Demo',
         demo: 'https://designcode4project.netlify.app/'
     },
+    {
+        id: 3,
+        image: 'https://github.com/Swinny96/Portfolio-22/blob/main/src/images/projects/reactminis.png?raw=true',
+        title: 'React Minis',
+        text: 'This is a mini Portfolio that showcases small React Projects that I have worked on',
+        github: 'https://github.com',
+        linktype: 'Live Project',
+        demo: 'https://react-minis.netlify.app/'
+    },
 ]
 
 export default TwentyTwentyOne

@@ -91,7 +91,6 @@ const AboutContent = styled.div`
     text-align: center;
   }
 `
-const Myself = styled.img``
 const AboutCards = styled.div`
   display: grid;
   grid-template-columns: repeat(3 1fr);

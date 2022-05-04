@@ -18,7 +18,7 @@ const Footer = () => {
         }
       </Permalinks>
       <Copyright>
-        <Copyprint>&copy; CSwinton, All right reserved</Copyprint>
+        <Copyprint>&copy; CSwinton, All rights reserved</Copyprint>
       </Copyright>
     </FooterSection>
   )

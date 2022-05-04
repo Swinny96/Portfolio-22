@@ -16,10 +16,6 @@ const PageList = [
         link: '#portfolio',
     },
     {
-        name: 'Testimonials',
-        link: '#testimonials',
-    },
-    {
         name: 'Contact',
         link: '#contact',
     },

@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import {AiOutlineHome, AiOutlineUser} from 'react-icons/ai'
 import {BiBook, BiMessageSquareDetail} from 'react-icons/bi'
-import {VscPreview} from 'react-icons/vsc'
+// import {VscPreview} from 'react-icons/vsc'
 import {IoBrushOutline} from 'react-icons/io5'
 import { useState } from 'react'
 
