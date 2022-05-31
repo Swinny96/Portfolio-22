@@ -4,7 +4,7 @@ const TwentyNineteen = [
         image: 'https://github.com/Swinny96/Portfolio-22/blob/main/src/images/projects/legacy.png?raw=true',
         title: 'Portfolio 2019-21',
         text: 'This is my previous portfolio that I used between the years of 2019 to 2021',
-        github: 'https://github.com/Swinny96/My-Portfolio',
+        github: 'https://github.com/Swinny96/Portfolio-19',
         linktype: 'Legacy Portfolio',
         demo: 'https://cswinton-portfolio-19to21.netlify.app/'
     },
@@ -27,7 +27,7 @@ const TwentyNineteen = [
         demo: 'https://xd.adobe.com/embed/3aacf42b-e010-4c13-65a0-3654546607c7-4c9d/?fullscreen'
     },
     {
-        id: 3,
+        id: 4,
         image: 'https://github.com/Swinny96/Portfolio-22/blob/main/src/images/projects/scran.png?raw=true',
         title: 'SCRAN',
         text: 'Myself and a group of peers made a new website along with some advertisments for a University Society called SCRAN',
@@ -35,6 +35,15 @@ const TwentyNineteen = [
         linktype: 'Live Project',
         demo: 'https://scranpreston.co.uk/'
     },
+/*     {
+        id: 5,
+        image: 'https://github.com/Swinny96/Portfolio-22/blob/main/src/images/projects/gmail.png?raw=true',
+        title: 'GMail Alexa Skill',
+        text: 'I built an Alexa application that would allow users to have their emails read back to them, this link shows a guide on how I built it',
+        github: 'https://github.com',
+        linktype: 'Live Project',
+        demo: 'https://evs-guide.netlify.app'
+    }, */
 ]
 
 export default TwentyNineteen
